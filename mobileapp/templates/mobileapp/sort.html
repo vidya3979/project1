@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'mobileapp/base.html'%}
+{% block body_block%}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-lg-4" style="margin-top:100px">
+        <form method="post">
+            {%csrf_token%}
+            <label>Minimum price</label>
+            <input type="text" name="price1" class="form-control">
+            <label style="margin-top:10px">Maximum price</label>
+            <input type="text" name="price2" class="form-control" style="margin-top:8px">
+            <input type="submit" value="Sort" class="btn btn-primary" style="margin-top:10px">
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+
+{% endblock%}

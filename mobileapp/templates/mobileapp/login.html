@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<div class="row">
+    <div class="col"></div>
+      <form method="post">
+      {% csrf_token %}
+        <div>
+          <label style="margin-top:100px">Username</label>
+          <input type="text" name="uname" class="form-control" >
+
+        </div>
+          <div>
+              <label style="margin-top:40px">Password</label>
+              <input type="password" name="password" class="form-control">
+          </div>
+            <br>
+            <button type="submit" class="btn btn-primary">SignIn</button>
+          <p style="margin-top:20px" ><a href="{%url 'registration' %}"><u>Register</u></a></p>
+
+      </form>
+
+
+  <div class="col"></div>
+
+</div>
+
+</body>
+</html>

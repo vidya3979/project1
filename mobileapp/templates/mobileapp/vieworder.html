@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%extends 'mobileapp/base.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-lg-9">
+    <form method="post">
+        {%csrf_token%}
+    <table class="table table-success table-striped" style="margin-top:20px;">
+        <tr>
+            <td>sl</td>
+            <td>Name</td>
+            <td>address</td>
+            <td>Contact</td>
+            <td>Product</td>
+            <td>client</td>
+            <td>Status</td>
+        </tr>
+        {%for order in orders%}
+        <tr>
+            <td>{{order.id}}</td>
+            <td>{{order.buyer_name}}</td>
+            <td>{{order.buyer_address}}</td>
+            <td>{{order.buyer_mobile}}</td>
+            <td>{{order.product}}</td>
+            <td>{{order.user}}</td>
+            <td>{{order.status}}</td>
+            <td><a href="{%url 'editorder' order.id%}" class="btn btn-md btn-outline-primary">Edit order</a></td>
+            <td><a href="{%url 'cancelorder' order.id%}" class="btn btn-md btn-outline-danger">Cancel order</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    </form>
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}

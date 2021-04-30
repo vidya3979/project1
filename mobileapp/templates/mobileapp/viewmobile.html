@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%extends 'mobileapp/base.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-lg-9">
+    <table class="table table-primary table-striped">
+        <tr>
+            <img width="200px" style="  display: block;margin-left: auto;margin-right: auto;"  src="{{mobile.mob_image.url}}" >
+        </tr>
+        <tr>
+            <td>Sl</td><td>{{mobile.id}}</td>
+        </tr>
+        <tr>
+            <td>PART_NUMBER</td><td>{{mobile.part_number}}</td>
+        </tr>
+        <tr>
+            <td>MANUFACTURER</td><td>{{mobile.manufacturer}}</td>
+        </tr>
+        <tr>
+            <td>MOBILE NAME</td><td>{{mobile.mobile_name}}</td>
+        </tr>
+        <tr>
+            <td>MODEL NUMBER</td><td>{{mobile.model_number}}</td>
+        </tr>
+        <tr>
+            <td>COLOR</td><td>{{mobile.color}}</td>
+        </tr>
+        <tr>
+            <td>PRICE</td><td>{{mobile.price}}</td>
+        </tr>
+        <tr>
+            <td>SPECIFICATION</td><td>{{mobile.specification}}</td>
+        </tr>
+    </table>
+<a class="btn btn-success" href="{%url 'buyer' mobile.id%}">Buy Now</a>
+</div>
+<div class="col"></div>
+</div>
+{% endblock %}
